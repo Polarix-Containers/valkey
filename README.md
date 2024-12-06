@@ -23,3 +23,8 @@
     cap_drop:
       - ALL
 ```
+
+### Licensing
+- The code in this repository is licensed under the Apache license. 😇
+- The image is built on `docker.io/valkey/valkey`, which is under the BSD license. Copyright to the base image belongs to LF Projects LLC.
+- Any image built by Polarix Containers is provided under the combination of license terms resulting from the use of individual packages.
