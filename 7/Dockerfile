@@ -2,7 +2,7 @@ ARG VERSION=7
 ARG UID=3009
 ARG GID=3009
 
-FROM valkey:${VERSION}-alpine
+FROM valkey/valkey:${VERSION}-alpine
 
 ARG UID
 ARG GID
