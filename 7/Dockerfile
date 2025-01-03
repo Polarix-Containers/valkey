@@ -12,7 +12,8 @@ LABEL maintainer="Thien Tran contact@tommytran.io"
 RUN apk -U upgrade \
     && apk add libstdc++ shadow
 
-RUN usermod -u ${UID} valkey \
+RUN --network=none \
+    usermod -u ${UID} valkey \
     && groupmod -g ${GID} valkey \
     && find / -user 999 -exec chown -h valkey {} \; \
     && find / -group 1000 -exec chgrp -h valkey {} \; \
