@@ -5,7 +5,7 @@
 
 ### Features & usage
 - Built on the [official image](https://github.com/valkey-io/valkey-container), to be used as a drop-in replacement.
-- Unprivileged image: you should check your volumes' permissions (eg `/data`), default UID/GID 3009.
+- Unprivileged image: you should check your volumes' permissions (eg `/data`), default UID/GID 200010.
 
 ### Sample Docker Compose config
 
@@ -16,7 +16,7 @@
     restart: unless-stopped
     volumes:
       - ./valkey:/data:Z
-    user: "3009:3009"
+    user: "200010:200010"
     read_only: true
     security_opt:
       - "no-new-privileges=true"
