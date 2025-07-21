@@ -16,6 +16,10 @@
     restart: unless-stopped
     volumes:
       - ./valkey:/data:Z
+    healthcheck:
+      test: ["CMD-SHELL", "valkey-cli ping | grep PONG"]
+      interval: 15s
+      timeout: 5s
     user: "200010:200010"
     read_only: true
     security_opt:
