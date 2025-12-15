@@ -1,5 +1,6 @@
 # Valkey
 
+![Build 9, scan & push](https://github.com/Polarix-Containers/valkey/actions/workflows/build-9.yml/badge.svg)
 ![Build 8, scan & push](https://github.com/Polarix-Containers/valkey/actions/workflows/build-8.yml/badge.svg)
 ![Build 7, scan & push](https://github.com/Polarix-Containers/valkey/actions/workflows/build-7.yml/badge.svg)
 
@@ -12,7 +13,7 @@
 ```
   valkey:
     container_name: valkey
-    image: ghcr.io/polarix-containers/valkey:8
+    image: ghcr.io/polarix-containers/valkey:9
     restart: unless-stopped
     volumes:
       - ./valkey:/data:Z

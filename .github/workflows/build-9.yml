@@ -1,4 +1,4 @@
-name: Build 8
+name: Build 9
 
 on:
   workflow_dispatch:
@@ -6,8 +6,8 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/build-8.yml'
-      - '8/**'
+      - '.github/workflows/build-9.yml'
+      - '9/**'
   schedule:
     # Build the image daily
     - cron: '15 0 * * *'
@@ -15,7 +15,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: polarix-containers/valkey
-  TAG: 8
+  TAG: 9
 
 jobs:
   build:
@@ -52,6 +52,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             ${{ env.TAG }}
+            latest
 
       - name: Build and push Docker image
         id: build-and-push
